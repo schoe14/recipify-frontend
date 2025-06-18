@@ -1,0 +1,48 @@
+/* tailwind-input.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your Global Custom Utility Classes */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Your Custom Component Styles using @apply */
+.dragging-item {
+  @apply opacity-50 border-2 border-dashed border-recipify-soft-coral cursor-grabbing;
+}
+
+.drop-target-active {
+  /* Apply !important to the specific utility if needed */
+  /* For example, if you want bg-recipify-light-mint to be important: */
+  @apply !bg-recipify-light-mint border-2 border-dashed border-recipify-mint-fresh shadow-[inset_0_0_5px_rgba(0,121,107,0.2)];
+  /* Or, if you want ALL properties from this @apply to be important,
+     you might need to apply ! to each one, or consider if !important is truly necessary.
+     Generally, try to achieve specificity without !important if possible.
+     If you MUST, apply it to the utility:
+     @apply !bg-recipify-light-mint !border-2 !border-dashed !border-recipify-mint-fresh ...
+     However, this can get verbose and might indicate a specificity war.
+     Often, just making one key property important is enough, e.g., the background.
+  */
+}
+
+.day-cell-disabled {
+  /* Apply !important to bg-neutral-100 */
+  @apply !bg-neutral-100 cursor-not-allowed;
+}
+
+.day-cell-disabled .meal-slot-drop-zone {
+  @apply pointer-events-none;
+}
+
+/*
+   .btn-primary {
+     @apply bg-recipify-mint-fresh text-recipify-deep-blue hover:bg-recipify-darker-teal px-4 py-2 rounded;
+   }
+*/

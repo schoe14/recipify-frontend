@@ -1,0 +1,6 @@
+{
+  "name": "Recipify",
+  "description": "Recipify: Your AI-powered culinary assistant! Select ingredients, cuisine, target audience, and servings to generate creative and tailored recipes. Uses edible, sensible ingredients and offers a customizable experience.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
